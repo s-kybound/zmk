@@ -64,11 +64,6 @@ static void deactivate_caps_word(const struct device *dev) {
     if (config->layers > -1) {
         zmk_keymap_layer_deactivate(config->layers);
     }
-    const struct behavior_caps_word_config *config = dev->config;
-
-    if (config->layers > -1) {
-        zmk_keymap_layer_deactivate(config->layers);
-    }
     data->active = false;
 }
 
