@@ -36,10 +36,6 @@ struct behavior_caps_word_config {
     bool ignore_alphas;
     bool ignore_numbers;
     bool ignore_modifiers;
-    int8_t layers;
-    bool ignore_alphas;
-    bool ignore_numbers;
-    bool ignore_modifiers;
     uint8_t index;
     uint8_t continuations_count;
     struct caps_word_continue_item continuations[];
