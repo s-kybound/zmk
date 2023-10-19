@@ -168,9 +168,6 @@ static int caps_word_keycode_state_changed_listener(const zmk_event_t *eh) {
         if ((!caps_word_is_alpha(ev->keycode) || !config->ignore_alphas) &&
             (!caps_word_is_numeric(ev->keycode) || !config->ignore_numbers) &&
             (!is_mod(ev->usage_page, ev->keycode) || !config->ignore_modifiers) &&
-        if ((!caps_word_is_alpha(ev->keycode) || !config->ignore_alphas) &&
-            (!caps_word_is_numeric(ev->keycode) || !config->ignore_numbers) &&
-            (!is_mod(ev->usage_page, ev->keycode) || !config->ignore_modifiers) &&
             !caps_word_is_caps_includelist(config, ev->usage_page, ev->keycode,
                                            ev->implicit_modifiers)) {
             LOG_DBG("Deactivating caps_word for 0x%02X - 0x%02X", ev->usage_page, ev->keycode);
