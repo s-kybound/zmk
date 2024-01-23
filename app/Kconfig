@@ -365,7 +365,9 @@ endmenu
 
 menu "Mouse Options"
 
-rsource "src/mouse/Kconfig"
+config ZMK_MOUSE
+    bool "Enable ZMK mouse emulation"
+    default n
 
 #Mouse Options
 endmenu

@@ -24,8 +24,8 @@ static inline struct zmk_mouse_move_state_changed_event *
 zmk_mouse_move_state_changed_from_encoded(uint32_t encoded, struct mouse_config config,
                                           bool pressed, int64_t timestamp) {
     struct vector2d max_speed = (struct vector2d){
-        .x = MOVE_X_DECODE(encoded),
-        .y = MOVE_Y_DECODE(encoded),
+        .x = MOVE_HOR_DECODE(encoded),
+        .y = MOVE_VERT_DECODE(encoded),
     };
 
     return new_zmk_mouse_move_state_changed((struct zmk_mouse_move_state_changed){

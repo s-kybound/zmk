@@ -1,13 +1,13 @@
-# Copyright (c) 2023 The ZMK Contributors
+# Copyright (c) 2021 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-config ZMK_MOUSE
+menuconfig ZMK_MOUSE
     bool "Enable ZMK mouse emulation"
     default n
 
 config ZMK_MOUSE_TICK_DURATION
     int "Mouse tick duration in ms"
-    default 16
+    default 8
 
 if ZMK_MOUSE
 
